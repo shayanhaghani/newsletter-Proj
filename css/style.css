@@ -1,0 +1,217 @@
+/* START AutoPreFixer For FlexBox */
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+.wrapper {
+  @include flexbox();
+}
+
+.item {
+  @include flex(1 200px);
+  @include order(2);
+}
+
+/* END AutoPreFixer For FlexBox */
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family:  Roboto;
+  height: 100%;
+  background-image: url("../images/Background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
+
+}
+
+.flex-container > div.up {
+  background-color: #2256f2;
+  color: black;
+  width: 30%;
+  height: auto;
+  background-image: url(../images/Pattern.png);
+  border-radius: 10px 10px 0px 0px;
+  padding: 28px;
+}
+
+.flex-container > div.up > p{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 30px;
+}
+
+.flex-container > div.down {
+  background-color: #ffffff;
+  color: black;
+  width: 30%;
+  height: auto;
+  border-radius: 0px 0px 10px 10px;
+}
+.flex-container > div.down > p{
+  color: #7d7d7d;
+  font-weight: 100;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 20px;
+}
+.flex-container > div.down > p.justone{
+  color: #c5c5c5;
+  font-size: 0.8rem;
+  text-align: left;
+  margin: 0px 0px 16px 0px;
+  padding: 0px 33px;
+
+}
+
+/* Form Styles */
+input[type=text], input[type=password] {
+    width: 58%;
+    padding: 13px 8px;
+    margin: 14px 33px;
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    background-color: #f4f7fa;
+    border-radius: 7px;
+    box-sizing: border-box;
+
+}
+
+.button {
+  color: #ffffff;
+    background-color: #2256f2;
+    border: 0px solid;
+    padding: 13px 24px;
+    border-radius: 8px;
+    margin: -32px;
+}
+
+/* PLACEHOLDER COLOR */
+  ::placeholder {
+  color: #bcbcbc;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #bcbcbc;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #bcbcbc;
+}
+
+.avatar {
+    width: 50px;
+    height: auto;
+    display: inline-block;
+    float: left;
+    margin: 9px 11px 0px 121px
+}
+.userinfo {
+     display: inline-block;
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 19px;
+}
+/*
+/
+@media screen and (max-width: 700px) {
+ .flex-container > div.down  {
+    width: 100%;
+  }
+  .flex-container > div.up {
+    width: 100%;
+  }
+}
+ @media only screen and (min-width: 1200px) {
+   .flex-container > div.down  {
+    width: 30%;
+  }
+   .flex-container > div.up {
+    width: 30%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .flex-container > div.down  {
+    width: 35%;
+  }
+   .flex-container > div.up {
+    width: 35%;
+  }
+*/
+
+
+@media only screen and (min-width: 700px) {
+  .flex-container > div.down  {
+    width: 100%;
+  }
+   .flex-container > div.up {
+    width: 100%;
+}
+}
+
+/* Medium devices (landscape tablets, 868px and up) */
+@media only screen and (min-width: 768px) {
+  .flex-container > div.down  {
+    width: 80%;
+  }
+   .flex-container > div.up {
+    width: 80%;
+}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .flex-container > div.down  {
+    width: 70%;
+  }
+   .flex-container > div.up {
+    width: 70%;
+}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .flex-container > div.down  {
+    width: 30%;
+  }
+   .flex-container > div.up {
+    width: 30%;
+}
+}
