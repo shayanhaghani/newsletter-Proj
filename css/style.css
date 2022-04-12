@@ -149,39 +149,21 @@ input[type=text], input[type=password] {
      font-weight: bold;
      line-height: 19px;
 }
-/*
-/
-@media screen and (max-width: 700px) {
- .flex-container > div.down  {
-    width: 100%;
-  }
-  .flex-container > div.up {
-    width: 100%;
-  }
-}
- @media only screen and (min-width: 1200px) {
-   .flex-container > div.down  {
-    width: 30%;
-  }
-   .flex-container > div.up {
-    width: 30%;
-  }
-
-  @media only screen and (min-width: 992px) {
-    .flex-container > div.down  {
-    width: 35%;
-  }
-   .flex-container > div.up {
-    width: 35%;
-  }
-*/
 
 
-@media only screen and (min-width: 460px) {
+@media only screen and (max-width: 600px) {
   .flex-container > div.down  {
     width: 100%;
   }
    .flex-container > div.up {
     width: 100%;
+}
+}
+@media only screen and (min-width: 992px) {
+  .flex-container > div.down  {
+    width: 30%;
+  }
+   .flex-container > div.up {
+    width: 30%;
 }
 }
